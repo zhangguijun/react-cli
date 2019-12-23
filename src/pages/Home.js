@@ -9,6 +9,7 @@ export default class Count extends Component {
         }
     }
     componentDidMount() {
+        console.log(this.props)
         setTimeout(() => {
             this.setState({
                 text: 'This is Home Page!!!'
@@ -21,8 +22,17 @@ export default class Count extends Component {
         return (
             <div className="home">
                 <h2>homepage</h2>
-                <h1 className="h-txt">{text}</h1>
+                <h1 className="h-txt"
+                    onClick= {this.handleClick}
+                
+                >{text}</h1>
             </div>
         )
+    }
+    handleClick = () => {
+        this.props.history.push({
+            pathname: '/count'
+        })
+        console.log('11')
     }
 }
