@@ -17,8 +17,8 @@ class App extends Component {
       userHasAuthenticated: this.userHasAuthenticated
     };
     return (
-        <Routes childProps={childProps} />
-        // <Routes2></Routes2>
+        // <Routes childProps={childProps} />
+        <Routes2></Routes2>
     );
   }
 }

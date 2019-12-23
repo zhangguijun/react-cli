@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import PropTypes from 'prop-types'
 const MyLoadingComponent = ({ isLoading, error }) => {
@@ -25,12 +25,12 @@ const CountItem = Loadable({
 
 const Routes = ({ history }) => (
   <Router history={history}>
-    <Layout>
+    <>
       <Switch>
         <Route exact path="/" component={HomeItem} />
         <Route exact path="/count" component={CountItem} />
       </Switch>
-    </Layout>
+    </>
   </Router>
 );
 MyLoadingComponent.propTypes = {
