@@ -7,6 +7,7 @@ const MyLoadingComponent = ({ isLoading, error }) => {
     return null;
   }
   if (error) {
+    
     return <div>Sorry, there was a problem loading the page.</div>;
   }
   return null;
