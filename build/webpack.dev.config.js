@@ -22,19 +22,19 @@ module.exports = merge(commonConfig, {
                 VUEP_BASE_URL: '/'
             }
         }),
-              //识别某些类别的webpack错误
+        //识别某些类别的webpack错误
         new FriendlyErrorsPlugin({
             // 运行成功
             compilationSuccessInfo: {
-            message: ['你的应用程序在这里运行http://localhost:8001'],
-            notes: ['有些附加说明要在成功编辑时显示']
+                message: ['你的应用程序在这里运行http://localhost:8001'],
+                notes: ['有些附加说明要在成功编辑时显示']
             },
             // 运行错误
-            onErrors: function(severity, errors){
-            //您可以收听插件转换和优先级的错误,严重性可以是'错误'或'警告'
+            onErrors: function (severity, errors) {
+                //您可以收听插件转换和优先级的错误, 严重性可以是'错误'或'警告'
             },
             //是否每次编译之间清除控制台,默认为true
-            clearConsole: true,  
+            clearConsole: true,
             //添加格式化程序和变换器（见下文）
             additionalFormatters: [],
             additionalTransformers: []
