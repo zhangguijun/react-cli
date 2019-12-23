@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import Routes from "./router";
+import Routes2 from './router/router2'
 import './assets/reset.css';
 class App extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends Component {
     };
     return (
         <Routes childProps={childProps} />
+        // <Routes2></Routes2>
     );
   }
 }
